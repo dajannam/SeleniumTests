@@ -1,11 +1,14 @@
 package Pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage {
+public class HomePage extends BasePage{
 
-    public HomePage(){}
+    public HomePage(WebDriver driver){
+        super(driver);
+    }
 
     @FindBy(id = "signin_button")
     private WebElement logInButton;
