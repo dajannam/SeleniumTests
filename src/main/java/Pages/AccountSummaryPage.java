@@ -10,10 +10,10 @@ public class AccountSummaryPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(css = "a[class=\"dropdown-toggle\"]>i")
-    private WebElement loggedInUser;
+@FindBy(id = "transfer_funds_tab")
+    private WebElement transferFunds;
 
-    public String getText(){
-        return loggedInUser.getText();
+    public void clickTransferFundsButton(){
+        transferFunds.click();
     }
 }
